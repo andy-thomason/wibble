@@ -3,4 +3,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\examples\triangle\main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\examples\index.html" />
+  </ItemGroup>
 </Project>

@@ -50,6 +50,34 @@ namespace wibble {
   private:
   };
 
+  struct vec4_data_t : data  {
+    std::array<float, 4> value;
+  };
+
+  class vec4 : public object<vec4_data_t> {
+  public:
+    vec4() {
+    }
+    void operator()(std::initializer_list<float> &il) {
+      std::copy(il.begin(), il.end(), value().value.begin());
+    }
+  private:
+  };
+
+  struct vec3_data_t : data  {
+    std::array<float, 3> value;
+  };
+
+  class vec3 : public object<vec3_data_t> {
+  public:
+    vec3() {
+    }
+    void operator()(std::initializer_list<float> &il) {
+      std::copy(il.begin(), il.end(), value().value.begin());
+    }
+  private:
+  };
+
   struct component_data_t : data {
     floatarray vertices;
     floatarray normals;
